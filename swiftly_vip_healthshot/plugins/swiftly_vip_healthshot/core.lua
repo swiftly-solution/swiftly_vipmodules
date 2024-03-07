@@ -44,5 +44,5 @@ function GetPluginName()
 end
 
 function GetPluginWebsite()
-    return "https://github.com/swiftly-solution/swiftly_vip_healthshot"
+    return "https://github.com/swiftly-solution/swiftly_vipmodules"
 end

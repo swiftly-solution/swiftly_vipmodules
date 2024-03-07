@@ -42,5 +42,5 @@ function GetPluginName()
 end
 
 function GetPluginWebsite()
-    return "https://github.com/swiftly-solution/swiftly_vip_speed"
+    return "https://github.com/swiftly-solution/swiftly_vipmodules"
 end

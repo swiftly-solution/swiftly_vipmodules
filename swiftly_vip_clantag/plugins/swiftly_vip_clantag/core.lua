@@ -41,5 +41,5 @@ function GetPluginName()
 end
 
 function GetPluginWebsite()
-    return "https://github.com/swiftly-solution/swiftly_vip_clantag"
+    return "https://github.com/swiftly-solution/swiftly_vipmodules"
 end
