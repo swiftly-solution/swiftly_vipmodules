@@ -3,10 +3,10 @@
     <img src="https://cdn.swiftlycs2.net/swiftly-logo.png" alt="SwiftlyLogo" width="80" height="80">
   </a>
 
-  <h3 align="center">[Swiftly] Admin System</h3>
+  <h3 align="center">[Swiftly] VIP Modules</h3>
 
   <p align="center">
-    A simple plugin for Swiftly that implements an Admin System.
+    A repository containing all the VIP Modules created by Swiftly Solution for VIP Core.
     <br/>
   </p>
 </p>
