@@ -1,0 +1,26 @@
+{
+    "title": {
+        "en": "Chat Tag",
+        "ro": "Tag in Chat"
+    },
+
+    "chattag": {
+        "en": "Tag",
+        "ro": "Prefix"
+    },
+    
+    "chattagcolor": {
+        "en": "Tag Color",
+        "ro": "Culoare Prefix"
+    },
+
+    "chatnamecolor": {
+        "en": "Name Color",
+        "ro": "Culoare Nume"
+    },
+
+    "chattextcolor": {
+        "en": "Text Color",
+        "ro": "Culoare Text"
+    }
+}
