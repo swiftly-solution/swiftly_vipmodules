@@ -9,7 +9,10 @@ events:on("OnPlayerSpawn", function(playerid)
                 if player:IsFakeClient() == 1 then return end
 
                 if server:IsPistolRound() == 0 then
-                    player:gravity():Set(gravity)
+                    NextTick(function()
+                        player:gravity():Set(gravity)
+                        print("gravity: " .. gravity)
+                    end)
                 end
             end
         end
