@@ -42,7 +42,7 @@
 5. Open a Pull Request
 
 ### Have ideas/Found bugs? 💡
-Join [Swiftly Discord Server](https://swiftlycs2.net/discord) and send a message in the topic from `📕╎ plugins-sharing` of this plugin!
+Join [Swiftly Discord Server](https://swiftlycs2.net/discord) and send a message in the topic from `📕╎ plugins-sharing` named `[VIP] Modules`!
 
 
 ---
