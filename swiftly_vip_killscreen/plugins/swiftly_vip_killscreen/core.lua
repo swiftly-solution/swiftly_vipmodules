@@ -35,7 +35,7 @@ function GetPluginVersion()
 end
 
 function GetPluginName()
-    return "[VIP] Defuse Kit"
+    return "[VIP] KillScreen"
 end
 
 function GetPluginWebsite()

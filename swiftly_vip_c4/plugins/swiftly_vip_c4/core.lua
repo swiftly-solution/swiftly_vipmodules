@@ -40,7 +40,7 @@ function GetPluginVersion()
 end
 
 function GetPluginName()
-    return "[VIP] Defuse Kit"
+    return "[VIP] C4"
 end
 
 function GetPluginWebsite()
