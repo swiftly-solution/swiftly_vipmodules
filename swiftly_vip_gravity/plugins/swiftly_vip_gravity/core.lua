@@ -11,7 +11,6 @@ events:on("OnPlayerSpawn", function(playerid)
                 if server:IsPistolRound() == 0 then
                     NextTick(function()
                         player:gravity():Set(gravity)
-                        print("gravity: " .. gravity)
                     end)
                 end
             end
