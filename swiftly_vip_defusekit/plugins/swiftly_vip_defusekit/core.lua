@@ -21,7 +21,7 @@ end)
 
 events:on("AllPluginsLoaded", function()
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        exports["swiftly_vipcore"]:CallExport("RegisterFeature", "defusekit", "vipmodules.defusekit")
+        exports["swiftly_vipcore"]:CallExport("RegisterFeature", "defusekit", "swiftly_vip_defusekit")
     end
 end)
 
