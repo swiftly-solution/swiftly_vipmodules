@@ -6,7 +6,7 @@
   <h3 align="center">[VIP] Chat</h3>
 
   <p align="center">
-    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swfitly VIP Core</a> that adds prefix & colors in chat to VIP Players.
+    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swiftly VIP Core</a> that adds prefix & colors in chat to VIP Players.
     <br/>
   </p>
 </p>
@@ -26,7 +26,7 @@
 			"id": "yourvip",
 			"display_name": "VIP Group",
 			"features": {
-				"chat": 1, // 1 for Enabled | 0 for Disabled
+				"chat": 0/1, // 1 for Enabled | 0 for Disabled
 				"chattag": "[VIP Group]", // The prefix that your VIP Players will have.
 				"chattagcolor": "{darkred}", // The color for the prefix that your VIP Players will have.
 				"chatnamecolor": "{default}", // The color for the name of your VIP Players.

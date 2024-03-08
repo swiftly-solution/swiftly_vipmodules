@@ -18,7 +18,7 @@
 
 ## Installation
 1. Perform a drag-and-drop installation.
-2. Add `regenhp` in the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
+2. Add `regenhp` to the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
 ### Example:
 ```json
 	"groups": [

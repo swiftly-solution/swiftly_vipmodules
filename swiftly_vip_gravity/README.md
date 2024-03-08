@@ -6,7 +6,7 @@
   <h3 align="center">[VIP] Gravity</h3>
 
   <p align="center">
-    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swfitly VIP Core</a> that changes the gravity of VIP Players.
+    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swiftly VIP Core</a> that changes the gravity of VIP Players.
     <br/>
   </p>
 </p>
@@ -18,7 +18,7 @@
 
 ## Installation
 1. Perform a drag-and-drop installation.
-2. Add `gravity` in the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
+2. Add `gravity` to the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
 ### Example:
 ```json
 	"groups": [
