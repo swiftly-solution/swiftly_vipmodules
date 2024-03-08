@@ -7,11 +7,11 @@ events:on("OnPlayerSpawn", function(playerid)
                 local player = GetPlayer(playerid)
                 if not player then return end
                 if player:IsFakeClient() == 1 then return end
-                
-                NextTick(function()
-                    player:speed():Set(speed)
-                end)
-                
+                if server:IsPistolRound() == 0 then
+                    NextTick(function()
+                        player:speed():Set(speed)
+                    end)
+                end
             end
         end
     end

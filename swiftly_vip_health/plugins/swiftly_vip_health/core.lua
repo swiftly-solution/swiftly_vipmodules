@@ -7,11 +7,13 @@ events:on("OnPlayerSpawn", function(playerid)
                 local player = GetPlayer(playerid)
                 if not player then return end
                 if player:IsFakeClient() == 1 then return end
-    
-                NextTick(function()
-                    player:health():SetMax(health)
-                    player:health():Set(health)
-                end)
+
+                if server:IsPistolRound() == 0 then
+                    NextTick(function()
+                        player:health():SetMax(health)
+                        player:health():Set(health)
+                    end)
+                end
             end
         end
     end
