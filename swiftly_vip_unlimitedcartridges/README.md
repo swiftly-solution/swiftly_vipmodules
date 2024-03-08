@@ -6,7 +6,7 @@
   <h3 align="center">[VIP] Unlimited Cartridges</h3>
 
   <p align="center">
-    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swiftly VIP Core</a> that modifies the number of cartridges to 999 when a VIP Player reloads his weapon.
+    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swiftly VIP Core</a> that modifies the number of cartridges to 99 when a VIP Player reloads his weapon.
     <br/>
   </p>
 </p>

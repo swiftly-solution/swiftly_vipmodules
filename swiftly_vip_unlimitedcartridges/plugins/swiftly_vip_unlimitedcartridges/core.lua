@@ -10,7 +10,7 @@ events:on("OnWeaponReload", function(playerid)
 
                 if server:IsPistolRound() == 0 then
                     local currentweapon = player:weapons():GetWeaponFromSlot(WeaponSlot.CurrentWeapon)
-                    currentweapon:SetReserveAmmo(999)
+                    currentweapon:SetReserveAmmo(99)
                 end
             end
         end
