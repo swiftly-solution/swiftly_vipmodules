@@ -1,4 +1,4 @@
-events:on("OnPlayerChat", function(playerid, text, teamonly)
+events:on("OnPlayerSpawn", function(playerid)
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
         if exports["swiftly_vipcore"]:CallExport("HasFeature", playerid, "chat") == 1 then
             if exports["swiftly_vipcore"]:CallExport("IsFeatureEnabled", playerid, "chat") == 1 then
@@ -20,8 +20,11 @@ events:on("OnPlayerChat", function(playerid, text, teamonly)
                 local player = GetPlayer(playerid)
                 if not player then return end
                 if player:IsFakeClient() == 1 then return end
-                playermanager:SendMsg(MessageType.Chat, chattagcolor .. chattag .. " " .. chatnamecolor .. player:GetName() .. "{default}: " .. chattextcolor .. text)
-                return false
+                
+                player:SetChatTag(chattag)
+                player:SetTagColor(chattagcolor)
+                player:SetNameColor(chatnamecolor)
+                player:SetChatColor(chattextcolor)
             end
         end
     end
