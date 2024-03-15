@@ -3,10 +3,10 @@
     <img src="https://cdn.swiftlycs2.net/swiftly-logo.png" alt="SwiftlyLogo" width="80" height="80">
   </a>
 
-  <h3 align="center">[VIP] Healthshot</h3>
+  <h3 align="center">[VIP] Unlimited Cartridges</h3>
 
   <p align="center">
-    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swiftly VIP Core</a> that gives a number of healthshot to a VIP Player at spawn.
+    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swiftly VIP Core</a> that modifies the number of cartridges to 99 when a VIP Player reloads his weapon.
     <br/>
   </p>
 </p>
@@ -18,7 +18,7 @@
 
 ## Installation
 1. Perform a drag-and-drop installation.
-2. Add `healthshot` to the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
+2. Add `unlimitedcartridges` to the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
 ### Example:
 ```json
 	"groups": [
@@ -26,7 +26,7 @@
 			"id": "yourvip",
 			"display_name": "VIP Group",
 			"features": {
-				"healthshot": value // (put , if you need to)
+				"unlimitedcartridges": 0/1 // (put , if you need to)
 			}
 		}
 	],

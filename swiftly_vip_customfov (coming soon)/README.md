@@ -3,22 +3,26 @@
     <img src="https://cdn.swiftlycs2.net/swiftly-logo.png" alt="SwiftlyLogo" width="80" height="80">
   </a>
 
-  <h3 align="center">[VIP] Healthshot</h3>
+  <h3 align="center">[VIP] Custom FOV</h3>
 
   <p align="center">
-    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swiftly VIP Core</a> that gives a number of healthshot to a VIP Player at spawn.
+    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swfitly VIP Core</a> that disables the flash effect for VIP Players (if they throwed it).
     <br/>
   </p>
 </p>
 
 ---
+### SOON
+- This module will be made when Skuzzi adds `IsVIP` export in VIP Core
+
+
 ### Dependencies 📃
 
 - [Swiftly VIP Core Plugin](https://github.com/swiftly-solution/swiftly_vipcore)
 
 ## Installation
 1. Perform a drag-and-drop installation.
-2. Add `healthshot` to the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
+2. Add `customfov` in the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
 ### Example:
 ```json
 	"groups": [
@@ -26,12 +30,15 @@
 			"id": "yourvip",
 			"display_name": "VIP Group",
 			"features": {
-				"healthshot": value // (put , if you need to)
+				"customfov": 1, // (put , if you need to)
 			}
 		}
 	],
 ```
 3. Reload the configuration of the VIP by using `sw_adminvip`.
+
+## Commands
+`sw_setfov <number>` - Sets a custom FOV to a VIP Player.
 
 ### Creating A Pull Request 😃
 

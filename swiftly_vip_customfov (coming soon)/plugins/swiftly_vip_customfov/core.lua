@@ -1,17 +1,13 @@
 events:on("OnPlayerSpawn", function(playerid)
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        if exports["swiftly_vipcore"]:CallExport("HasFeature", playerid, "speed") == 1 then
-            if exports["swiftly_vipcore"]:CallExport("IsFeatureEnabled", playerid, "speed") == 1 then
-                local speed = exports["swiftly_vipcore"]:CallExport("GetFeatureValue", playerid, "speed")
-                if type(speed) ~= "number" then speed = tonumber(speed) end
+        if exports["swiftly_vipcore"]:CallExport("HasFeature", playerid, "fov") == 1 then
+            if exports["swiftly_vipcore"]:CallExport("IsFeatureEnabled", playerid, "fov") == 1 then
+                local fov = exports["swiftly_vipcore"]:CallExport("GetFeatureValue", playerid, "fov")
+                if type(fov) ~= "number" then fov = tonumber(fov) end
                 local player = GetPlayer(playerid)
                 if not player then return end
                 if player:IsFakeClient() == 1 then return end
-                if server:IsPistolRound() == 0 then
-                    NextTick(function()
-                        player:speed():Set(speed)
-                    end)
-                end
+
             end
         end
     end
@@ -19,13 +15,13 @@ end)
 
 events:on("AllPluginsLoaded", function()
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        exports["swiftly_vipcore"]:CallExport("RegisterFeature", "speed", "swiftly_vip_speed.title")
+        exports["swiftly_vipcore"]:CallExport("RegisterFeature", "fov", "swiftly_vip_fov.title")
     end
 end)
 
 events:on("OnPluginStop", function()
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        exports["swiftly_vipcore"]:CallExport("UnregisterFeature", "speed")
+        exports["swiftly_vipcore"]:CallExport("UnregisterFeature", "fov")
     end
 end)
 
@@ -38,7 +34,7 @@ function GetPluginVersion()
 end
 
 function GetPluginName()
-    return "[VIP] Speed"
+    return "[VIP] Custom FOV"
 end
 
 function GetPluginWebsite()

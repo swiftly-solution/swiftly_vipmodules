@@ -1,17 +1,16 @@
 events:on("OnPlayerSpawn", function(playerid)
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        if exports["swiftly_vipcore"]:CallExport("HasFeature", playerid, "health") == 1 then
-            if exports["swiftly_vipcore"]:CallExport("IsFeatureEnabled", playerid, "health") == 1 then
-                local health = exports["swiftly_vipcore"]:CallExport("GetFeatureValue", playerid, "health")
-                if type(health) ~= "number" then health = tonumber(health) end
+        if exports["swiftly_vipcore"]:CallExport("HasFeature", playerid, "gravity") == 1 then
+            if exports["swiftly_vipcore"]:CallExport("IsFeatureEnabled", playerid, "gravity") == 1 then
+                local gravity = exports["swiftly_vipcore"]:CallExport("GetFeatureValue", playerid, "gravity")
+                if type(gravity) ~= "number" then gravity = tonumber(gravity) end
                 local player = GetPlayer(playerid)
                 if not player then return end
                 if player:IsFakeClient() == 1 then return end
 
                 if server:IsPistolRound() == 0 then
                     NextTick(function()
-                        player:health():SetMax(health)
-                        player:health():Set(health)
+                        player:gravity():Set(gravity)
                     end)
                 end
             end
@@ -21,13 +20,13 @@ end)
 
 events:on("AllPluginsLoaded", function()
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        exports["swiftly_vipcore"]:CallExport("RegisterFeature", "health", "swiftly_vip_health.title")
+        exports["swiftly_vipcore"]:CallExport("RegisterFeature", "gravity", "swiftly_vip_gravity.title")
     end
 end)
 
 events:on("OnPluginStop", function()
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        exports["swiftly_vipcore"]:CallExport("UnregisterFeature", "health")
+        exports["swiftly_vipcore"]:CallExport("UnregisterFeature", "gravity")
     end
 end)
 
@@ -40,7 +39,7 @@ function GetPluginVersion()
 end
 
 function GetPluginName()
-    return "[VIP] Health"
+    return "[VIP] Gravity"
 end
 
 function GetPluginWebsite()

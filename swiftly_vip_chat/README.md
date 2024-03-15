@@ -3,10 +3,10 @@
     <img src="https://cdn.swiftlycs2.net/swiftly-logo.png" alt="SwiftlyLogo" width="80" height="80">
   </a>
 
-  <h3 align="center">[VIP] Healthshot</h3>
+  <h3 align="center">[VIP] Chat</h3>
 
   <p align="center">
-    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swiftly VIP Core</a> that gives a number of healthshot to a VIP Player at spawn.
+    A module for <a href="https://github.com/swiftly-solution/swiftly_vipcore">Swiftly VIP Core</a> that adds prefix & colors in chat to VIP Players.
     <br/>
   </p>
 </p>
@@ -18,7 +18,7 @@
 
 ## Installation
 1. Perform a drag-and-drop installation.
-2. Add `healthshot` to the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
+2. Add `chat`, `chattag`, `chattagcolor`, `chatnamecolor`, `chattextcolor` to the desired VIP Group in `addons/swiftly/configs/plugins/vips.json`.
 ### Example:
 ```json
 	"groups": [
@@ -26,7 +26,11 @@
 			"id": "yourvip",
 			"display_name": "VIP Group",
 			"features": {
-				"healthshot": value // (put , if you need to)
+				"chat": 0/1, // 1 for Enabled | 0 for Disabled
+				"chattag": "[VIP Group]", // The prefix that your VIP Players will have.
+				"chattagcolor": "{darkred}", // The color for the prefix that your VIP Players will have.
+				"chatnamecolor": "{default}", // The color for the name of your VIP Players.
+				"chattextcolor": "{default}"  // The color for the text of your VIP Players (put , if you need to).
 			}
 		}
 	],

@@ -1,18 +1,18 @@
 events:on("OnPlayerSpawn", function(playerid)
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        if exports["swiftly_vipcore"]:CallExport("HasFeature", playerid, "health") == 1 then
-            if exports["swiftly_vipcore"]:CallExport("IsFeatureEnabled", playerid, "health") == 1 then
-                local health = exports["swiftly_vipcore"]:CallExport("GetFeatureValue", playerid, "health")
-                if type(health) ~= "number" then health = tonumber(health) end
+        if exports["swiftly_vipcore"]:CallExport("HasFeature", playerid, "defusekit") == 1 then
+            if exports["swiftly_vipcore"]:CallExport("IsFeatureEnabled", playerid, "defusekit") == 1 then
+                local defusekit = exports["swiftly_vipcore"]:CallExport("GetFeatureValue", playerid, "defusekit")
+                if type(defusekit) ~= "number" then defusekit = tonumber(defusekit) end
                 local player = GetPlayer(playerid)
                 if not player then return end
                 if player:IsFakeClient() == 1 then return end
 
                 if server:IsPistolRound() == 0 then
-                    NextTick(function()
-                        player:health():SetMax(health)
-                        player:health():Set(health)
-                    end)
+                    local team = player:team():Get()
+                    if team == TEAM_CT then
+                        player:weapons():GiveWeapons("item_defuser")
+                    end
                 end
             end
         end
@@ -21,13 +21,13 @@ end)
 
 events:on("AllPluginsLoaded", function()
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        exports["swiftly_vipcore"]:CallExport("RegisterFeature", "health", "swiftly_vip_health.title")
+        exports["swiftly_vipcore"]:CallExport("RegisterFeature", "defusekit", "swiftly_vip_defusekit.title")
     end
 end)
 
 events:on("OnPluginStop", function()
     if GetPluginState("swiftly_vipcore") == PluginState.Started then
-        exports["swiftly_vipcore"]:CallExport("UnregisterFeature", "health")
+        exports["swiftly_vipcore"]:CallExport("UnregisterFeature", "defusekit")
     end
 end)
 
@@ -40,7 +40,7 @@ function GetPluginVersion()
 end
 
 function GetPluginName()
-    return "[VIP] Health"
+    return "[VIP] Defuse Kit"
 end
 
 function GetPluginWebsite()
